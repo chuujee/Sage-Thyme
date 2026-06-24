@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Event Styling & Catering | Sage & Thyme Caterers</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+    body { 
+        font-family: 'Plus Jakarta Sans', sans-serif; 
+        background-color: #faf8f5; 
+    }
+
+    .font-serif { font-family: 'Playfair Display', serif; }
+    .font-script { font-family: 'Alex Brush', cursive; }
+    
+    .bg-sage { background-color: #5f6f5e; }
+    .text-sage { color: #5f6f5e; }
+    .text-gold { color: #C5A059; }
+    
+    .dropdown-menu { display: none; }
+    .dropdown-menu.show-menu { display: block; }
+
+    .slide { opacity: 0; transition: opacity 1s ease-in-out; position: absolute; }
+    .slide.active { opacity: 1; }
+</style>
+</head>
+<body class="text-gray-800 flex flex-col min-h-screen antialiased overflow-x-hidden">
+
+ 
+    <header class="w-full bg-sage shadow-md sticky top-0 z-40">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html">
+                <img src="images/logo1.png" alt="Sage & Thyme Logo" class="h-20 w-auto object-contain">
+            </a>
+
+           <div class="hidden lg:flex space-x-6 xl:space-x-8 text-[12px] xl:text-[13px] font-bold tracking-widest uppercase text-white/80 items-center mx-auto">
+    <a href="index.html" class="text-white border-b-2 border-[#C5A059] pb-1 transition">Home</a>
+    
+    <div class="relative dropdown group py-2">
+        <button class="dropdown-trigger hover:text-white flex items-center gap-1 cursor-pointer bg-transparent border-0 font-bold uppercase tracking-widest text-white/80 text-[12px] xl:text-[13px]">About Us <i class="fa-solid fa-chevron-down text-[10px]"></i></button>
+        <ul class="dropdown-menu hidden absolute left-0 top-full mt-2 w-72 bg-white text-gray-800 rounded-lg shadow-xl p-2 z-50 border border-gray-100 normal-case font-medium">
+            <li><a href="stories.html" class="block px-4 py-2 text-xs font-semibold tracking-wider hover:bg-[#faf8f5] hover:text-sage rounded-md transition"><i class="fa-solid fa-book-open mr-2 text-[#C5A059]"></i> Our Corporate Stories & Values</a></li>
+            <li><a href="structure.html" class="block px-4 py-2 text-xs font-semibold tracking-wider hover:bg-[#faf8f5] hover:text-sage rounded-md transition"><i class="fa-solid fa-sitemap mr-2 text-[#C5A059]"></i> Corporate Organizational Structure</a></li>
+        </ul>
+    </div>
+
+    <div class="relative dropdown group py-2">
+        <button class="dropdown-trigger hover:text-white flex items-center gap-1 cursor-pointer bg-transparent border-0 font-bold uppercase tracking-widest text-white/80 text-[12px] xl:text-[13px]">Services <i class="fa-solid fa-chevron-down text-[10px]"></i></button>
+        <ul class="dropdown-menu hidden absolute left-0 top-full mt-2 w-72 bg-white text-gray-800 rounded-lg shadow-xl p-2 z-50 border border-gray-100 normal-case font-medium">
+            <li><a href="event.html" class="block px-4 py-2 text-xs font-semibold tracking-wider hover:bg-[#faf8f5] hover:text-sage rounded-md transition"><i class="fa-solid fa-building mr-2 text-[#C5A059]"></i> Corporate Event Styling & Setup</a></li>
+            <li><a href="celebration.html" class="block px-4 py-2 text-xs font-semibold tracking-wider hover:bg-[#faf8f5] hover:text-sage rounded-md transition"><i class="fa-solid fa-champagne-glasses mr-2 text-[#C5A059]"></i> Bespoke Celebrations & Galas</a></li>
+        </ul>
+    </div>
+
+    <div class="relative dropdown group py-2">
+        <button class="dropdown-trigger hover:text-white flex items-center gap-1 cursor-pointer bg-transparent border-0 font-bold uppercase tracking-widest text-white/80 text-[12px] xl:text-[13px]">Packages <i class="fa-solid fa-chevron-down text-[10px]"></i></button>
+        <ul class="dropdown-menu hidden absolute left-0 top-full mt-2 w-72 bg-white text-gray-800 rounded-lg shadow-xl p-2 z-50 border border-gray-100 normal-case font-medium">
+            <li><a href="buffet.html" class="block px-4 py-2 text-xs font-semibold tracking-wider hover:bg-[#faf8f5] hover:text-sage rounded-md transition"><i class="fa-solid fa-bowl-food mr-2 text-[#C5A059]"></i> Corporate Buffet & Seminar Sets</a></li>
+            <li><a href="wedding.html" class="block px-4 py-2 text-xs font-semibold tracking-wider hover:bg-[#faf8f5] hover:text-sage rounded-md transition"><i class="fa-solid fa-wand-magic-sparkles mr-2 text-[#C5A059]"></i> Premium Weddings & Banquet Menus</a></li>
+        </ul>
+    </div>
+
+    <div class="relative dropdown group py-2">
+        <button class="dropdown-trigger hover:text-white flex items-center gap-1 cursor-pointer bg-transparent border-0 font-bold uppercase tracking-widest text-white/80 text-[12px] xl:text-[13px]">Gallery <i class="fa-solid fa-chevron-down text-[10px]"></i></button>
+        <ul class="dropdown-menu hidden absolute left-0 top-full mt-2 w-72 bg-white text-gray-800 rounded-lg shadow-xl p-2 z-50 border border-gray-100 normal-case font-medium">
+            <li><a href="grid.html" class="block px-4 py-2 text-xs font-semibold tracking-wider hover:bg-[#faf8f5] hover:text-sage rounded-md transition"><i class="fa-solid fa-images mr-2 text-[#C5A059]"></i> Visual Food Presentation Grid</a></li>
+            <li><a href="transformations.html" class="block px-4 py-2 text-xs font-semibold tracking-wider hover:bg-[#faf8f5] hover:text-sage rounded-md transition"><i class="fa-solid fa-wand-magic mr-2 text-[#C5A059]"></i> Past Event Transformations</a></li>
+            <li><a href="feedback.html" class="block px-4 py-2 text-xs font-semibold tracking-wider hover:bg-[#faf8f5] hover:text-sage rounded-md transition"><i class="fa-solid fa-comments mr-2 text-[#C5A059]"></i> Client Feedback Hub</a></li>
+        </ul>
+    </div>
+
+    <div class="relative dropdown group py-2">
+        <button class="dropdown-trigger hover:text-white flex items-center gap-1 cursor-pointer bg-transparent border-0 font-bold uppercase tracking-widest text-white/80 text-[12px] xl:text-[13px]">Booking & Settlements <i class="fa-solid fa-chevron-down text-[10px]"></i></button>
+        <ul class="dropdown-menu hidden absolute right-0 top-full mt-2 w-80 bg-white text-gray-800 rounded-lg shadow-xl p-2 z-50 border border-gray-100 normal-case font-medium">
+            <li><a href="contact.html" class="block px-4 py-2 text-xs font-semibold tracking-wider hover:bg-[#faf8f5] hover:text-sage rounded-md transition"><i class="fa-solid fa-headset mr-2 text-[#C5A059]"></i> Global Contact Us Concierge</a></li>
+            <li><a href="calculator.html" class="block px-4 py-2 text-xs font-semibold tracking-wider hover:bg-[#faf8f5] hover:text-sage rounded-md transition"><i class="fa-solid fa-calculator mr-2 text-[#C5A059]"></i> Interactive Budget Calculator</a></li>
+            <li><a href="bill.html" class="block px-4 py-2 text-xs font-semibold tracking-wider hover:bg-[#faf8f5] hover:text-sage rounded-md transition"><i class="fa-solid fa-credit-card mr-2 text-[#C5A059]"></i> Enterprise Billing & Settlements</a></li>
+        </ul>
+    </div>
+</div>
+</nav>
+</header>
+
+   <main class="flex-grow max-w-7xl w-full mx-auto px-6 my-16 flex flex-col gap-16 reveal-element">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6">
+                <p class="text-sage font-script text-5xl mb-4">Professional Setup</p>
+                <h2 class="text-3xl font-serif text-gray-900 leading-tight mb-6 uppercase tracking-wide">Corporate Event Styling & Setup</h2>
+                <div class="space-y-4 text-gray-600 text-sm">
+                    <p>We provide professional event transformation and spatial management solutions for dynamic business environments. From formal Annual General Meetings (AGMs) to large-scale educational seminars and internal executive board meetings, our team ensures perfect delivery.</p>
+                    <p>Our setups include high-quality corporate linens, premium table centerpieces, organized buffet line layout planning, and dedicated on-site waitstaff logistics to reflect your company's absolute reliability and brand authority.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+                    <div class="p-4 bg-white rounded-xl border border-gray-100 shadow-sm">
+                        <h4 class="font-bold text-gray-900 text-xs uppercase tracking-wider mb-1 text-sage"><i class="fa-solid fa-laptop-file mr-2"></i> Seminars & AGMs</h4>
+                        <p class="text-[11px] text-gray-500 leading-relaxed">Clean, systematic coffee break stations and institutional lunchtime configurations.</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-xl border border-gray-100 shadow-sm">
+                        <h4 class="font-bold text-gray-900 text-xs uppercase tracking-wider mb-1 text-[#C5A059]"><i class="fa-solid fa-chair mr-2"></i> Board & VIP Briefings</h4>
+                        <p class="text-[11px] text-gray-500 leading-relaxed">Elite individual bento box catering or pristine dome systems for corporate VVIPs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-6 w-full h-[400px] rounded-2xl overflow-hidden shadow-2xl bg-gray-200">
+                <img class="w-full h-full object-cover" src="images/event.jpeg" alt="Corporate Event Setup">
+            </div>
+        </div>
+    </main>
+
+    <footer class="w-full bg-sage pt-12 pb-6 text-white border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-sm opacity-80 normal-case font-light">
+            <div>
+                <h5 class="font-bold uppercase tracking-widest text-[#C5A059] text-xs mb-3">Corporate Headquarters</h5>
+                <p class="leading-relaxed">Level 18, Menara Sage & Thyme,<br>Persiaran Korporat, Cyberjaya,<br>63000 Selangor, Malaysia.</p>
+            </div>
+
+            <div>
+                <h5 class="font-bold uppercase tracking-widest text-[#C5A059] text-xs mb-3">Direct Concierge</h5>
+                <p class="mb-1"><i class="fa-solid fa-phone mr-2 text-xs"></i> General: +603-8888 7766</p>
+                <p class="mb-1"><i class="fa-solid fa-envelope mr-2 text-xs"></i> Events: concierge@sagethyme.com</p>
+                <p><i class="fa-solid fa-clock mr-2 text-xs"></i> Mon - Sat: 09:00 AM - 06:00 PM</p>
+            </div>
+            <div>
+                <h5 class="font-bold uppercase tracking-widest text-[#C5A059] text-xs mb-3">About The Infrastructure</h5>
+                <p class="leading-relaxed">A premium multi-page client-side digital deployment engineered to streamline high-end hospitality booking and B2B corporate catering requests within Malaysia.</p>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-white/70 text-[11px] xl:text-[12px] tracking-[0.15em] uppercase gap-4">
+            <div class="text-center md:text-left">
+                &copy; <span id="year"></span> sage & thyme caterers. ALL RIGHTS RESERVED. CORPORATE DEPLOYMENT PHASE V4.
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-white transition">privacy policy</a>
+                <span>•</span>
+                <a href="#" class="hover:text-white transition">terms & conditions</a>
+            </div>
+        </div>
+    </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+    <script>
+        document.querySelectorAll('.year').forEach(el => el.textContent = new Date().getFullYear());
+
+        document.querySelectorAll('.dropdown-trigger').forEach(trigger => {
+            trigger.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const currentMenu = this.nextElementSibling;
+                document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                    if (menu !== currentMenu) menu.classList.remove('show-menu');
+                });
+                currentMenu.classList.toggle('show-menu');
+            });
+        });
+        document.addEventListener('click', function() {
+            document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('show-menu'));
+        });
+
+        const searchOverlay = document.getElementById('search-overlay');
+        const searchInput = document.querySelector('.search-input');
+        const searchAlert = document.querySelector('.search-alert');
+
+        document.querySelectorAll('.search-open-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                searchOverlay.classList.add('open');
+                setTimeout(() => searchInput.focus(), 200);
+            });
+        });
+        document.querySelectorAll('.search-close-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                searchOverlay.classList.remove('open');
+                searchAlert.classList.add('hidden');
+                searchInput.value = "";
+            });
+        });
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') { e.preventDefault(); searchAlert.classList.remove('hidden'); }
+        });
+
+        const contactDrawer = document.getElementById('contact-drawer');
+        const drawerBackdrop = document.getElementById('drawer-backdrop');
+
+        document.querySelectorAll('.drawer-open-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                contactDrawer.classList.add('open');
+                drawerBackdrop.classList.remove('hidden');
+                setTimeout(() => drawerBackdrop.classList.add('opacity-100'), 10);
+            });
+        });
+        window.closeDrawer = function() {
+            contactDrawer.classList.remove('open');
+            drawerBackdrop.classList.remove('opacity-100');
+            setTimeout(() => drawerBackdrop.classList.add('hidden'), 500);
+        }
+    </script>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 4000);
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

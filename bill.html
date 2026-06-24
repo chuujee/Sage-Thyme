@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Event Styling & Catering | Sage & Thyme Caterers</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:ital,wght=0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght=300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+    body { 
+        font-family: 'Plus Jakarta Sans', sans-serif; 
+        background-color: #faf8f5; 
+    }
+    
+    .font-serif { font-family: 'Playfair Display', serif; }
+    .font-script { font-family: 'Alex Brush', cursive; }
+    
+    .bg-sage { background-color: #5f6f5e; }
+    .text-sage { color: #5f6f5e; }
+    .text-gold { color: #C5A059; }
+    
+    .dropdown-menu { display: none; }
+    .dropdown-menu.show-menu { display: block; }
+
+    .slide { opacity: 0; transition: opacity 1s ease-in-out; position: absolute; }
+    .slide.active { opacity: 1; }
+</style>
+</head>
+<body class="text-gray-800 flex flex-col min-h-screen antialiased overflow-x-hidden">
+
+    <header class="w-full bg-sage shadow-md sticky top-0 z-40">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html">
+                <img src="images/logo1.png" alt="Sage & Thyme Logo" class="h-20 w-auto object-contain">
+            </a>
+
+           <div class="hidden lg:flex space-x-6 xl:space-x-8 text-[12px] xl:text-[13px] font-bold tracking-widest uppercase text-white/80 items-center mx-auto">
+    <a href="index.html" class="text-white border-b-2 border-[#C5A059] pb-1 transition">Home</a>
+    
+    <div class="relative dropdown group py-2">
+        <button class="dropdown-trigger hover:text-white flex items-center gap-1 cursor-pointer bg-transparent border-0 font-bold uppercase tracking-widest text-white/80 text-[12px] xl:text-[13px]">About Us <i class="fa-solid fa-chevron-down text-[10px]"></i></button>
+        <ul class="dropdown-menu hidden absolute left-0 top-full mt-2 w-72 bg-white text-gray-800 rounded-lg shadow-xl p-2 z-50 border border-gray-100 normal-case font-medium">
+            <li><a href="stories.html" class="block px-4 py-2 text-xs font-semibold tracking-wider hover:bg-[#faf8f5] hover:text-sage rounded-md transition"><i class="fa-solid fa-book-open mr-2 text-[#C5A059]"></i> Our Corporate Stories & Values</a></li>
+            <li><a href="structure.html" class="block px-4 py-2 text-xs font-semibold tracking-wider hover:bg-[#faf8f5] hover:text-sage rounded-md transition"><i class="fa-solid fa-sitemap mr-2 text-[#C5A059]"></i> Corporate Organizational Structure</a></li>
+        </ul>
+    </div>
+
+    <div class="relative dropdown group py-2">
+        <button class="dropdown-trigger hover:text-white flex items-center gap-1 cursor-pointer bg-transparent border-0 font-bold uppercase tracking-widest text-white/80 text-[12px] xl:text-[13px]">Services <i class="fa-solid fa-chevron-down text-[10px]"></i></button>
+        <ul class="dropdown-menu hidden absolute left-0 top-full mt-2 w-72 bg-white text-gray-800 rounded-lg shadow-xl p-2 z-50 border border-gray-100 normal-case font-medium">
+            <li><a href="event.html" class="block px-4 py-2 text-xs font-semibold tracking-wider hover:bg-[#faf8f5] hover:text-sage rounded-md transition"><i class="fa-solid fa-building mr-2 text-[#C5A059]"></i> Corporate Event Styling & Setup</a></li>
+            <li><a href="celebration.html" class="block px-4 py-2 text-xs font-semibold tracking-wider hover:bg-[#faf8f5] hover:text-sage rounded-md transition"><i class="fa-solid fa-champagne-glasses mr-2 text-[#C5A059]"></i> Bespoke Celebrations & Galas</a></li>
+        </ul>
+    </div>
+
+    <div class="relative dropdown group py-2">
+        <button class="dropdown-trigger hover:text-white flex items-center gap-1 cursor-pointer bg-transparent border-0 font-bold uppercase tracking-widest text-white/80 text-[12px] xl:text-[13px]">Packages <i class="fa-solid fa-chevron-down text-[10px]"></i></button>
+        <ul class="dropdown-menu hidden absolute left-0 top-full mt-2 w-72 bg-white text-gray-800 rounded-lg shadow-xl p-2 z-50 border border-gray-100 normal-case font-medium">
+            <li><a href="buffet.html" class="block px-4 py-2 text-xs font-semibold tracking-wider hover:bg-[#faf8f5] hover:text-sage rounded-md transition"><i class="fa-solid fa-bowl-food mr-2 text-[#C5A059]"></i> Corporate Buffet & Seminar Sets</a></li>
+            <li><a href="wedding.html" class="block px-4 py-2 text-xs font-semibold tracking-wider hover:bg-[#faf8f5] hover:text-sage rounded-md transition"><i class="fa-solid fa-wand-magic-sparkles mr-2 text-[#C5A059]"></i> Premium Weddings & Banquet Menus</a></li>
+        </ul>
+    </div>
+
+    <div class="relative dropdown group py-2">
+        <button class="dropdown-trigger hover:text-white flex items-center gap-1 cursor-pointer bg-transparent border-0 font-bold uppercase tracking-widest text-white/80 text-[12px] xl:text-[13px]">Gallery <i class="fa-solid fa-chevron-down text-[10px]"></i></button>
+        <ul class="dropdown-menu hidden absolute left-0 top-full mt-2 w-72 bg-white text-gray-800 rounded-lg shadow-xl p-2 z-50 border border-gray-100 normal-case font-medium">
+            <li><a href="grid.html" class="block px-4 py-2 text-xs font-semibold tracking-wider hover:bg-[#faf8f5] hover:text-sage rounded-md transition"><i class="fa-solid fa-images mr-2 text-[#C5A059]"></i> Visual Food Presentation Grid</a></li>
+            <li><a href="transformations.html" class="block px-4 py-2 text-xs font-semibold tracking-wider hover:bg-[#faf8f5] hover:text-sage rounded-md transition"><i class="fa-solid fa-wand-magic mr-2 text-[#C5A059]"></i> Past Event Transformations</a></li>
+            <li><a href="feedback.html" class="block px-4 py-2 text-xs font-semibold tracking-wider hover:bg-[#faf8f5] hover:text-sage rounded-md transition"><i class="fa-solid fa-comments mr-2 text-[#C5A059]"></i> Client Feedback Hub</a></li>
+        </ul>
+    </div>
+
+    <div class="relative dropdown group py-2">
+        <button class="dropdown-trigger hover:text-white flex items-center gap-1 cursor-pointer bg-transparent border-0 font-bold uppercase tracking-widest text-white/80 text-[12px] xl:text-[13px]">Booking & Settlements <i class="fa-solid fa-chevron-down text-[10px]"></i></button>
+        <ul class="dropdown-menu hidden absolute right-0 top-full mt-2 w-80 bg-white text-gray-800 rounded-lg shadow-xl p-2 z-50 border border-gray-100 normal-case font-medium">
+            <li><a href="contact.html" class="block px-4 py-2 text-xs font-semibold tracking-wider hover:bg-[#faf8f5] hover:text-sage rounded-md transition"><i class="fa-solid fa-headset mr-2 text-[#C5A059]"></i> Global Contact Us Concierge</a></li>
+            <li><a href="calculator.html" class="block px-4 py-2 text-xs font-semibold tracking-wider hover:bg-[#faf8f5] hover:text-sage rounded-md transition"><i class="fa-solid fa-calculator mr-2 text-[#C5A059]"></i> Interactive Budget Calculator</a></li>
+            <li><a href="bill.html" class="block px-4 py-2 text-xs font-semibold tracking-wider hover:bg-[#faf8f5] hover:text-sage rounded-md transition"><i class="fa-solid fa-credit-card mr-2 text-[#C5A059]"></i> Enterprise Billing & Settlements</a></li>
+        </ul>
+    </div>
+</div>
+</nav>
+</header>
+
+    <section class="max-w-4xl mx-auto w-full px-6 py-16 flex-grow flex items-center justify-center reveal-element">
+        <div class="bg-white p-10 md:p-12 border border-gray-100 shadow-xl rounded-2xl border-t-4 border-sage text-center w-full">
+            <h3 class="font-serif text-2xl text-gray-900 uppercase tracking-wide mb-3">Search Order Invoice</h3>
+            <p class="text-xs text-gray-400 mb-6">Please type your designated Invoice ID to retrieve your luxury event bill breakdown.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto justify-center">
+                <input type="text" id="invoice-input" placeholder="Try typing: ST-2026-9921" class="text-xs p-4 bg-[#faf8f5] border border-gray-200 rounded-md focus:outline-none focus:border-sage font-bold tracking-widest text-center uppercase flex-grow">
+                <button id="verify-invoice-btn" class="bg-sage text-white text-xs font-bold tracking-widest px-8 py-4 uppercase rounded-sm hover:bg-gray-900 transition shadow-sm cursor-pointer flex items-center justify-center gap-2">
+                    <span id="verify-text"><i class="fa-solid fa-magnifying-glass mr-1"></i> Verify Invoice</span>
+                    <span id="verify-spinner" class="hidden"><i class="fa-solid fa-spinner animate-spin-custom"></i> Checking...</span>
+                </button>
+            </div>
+            <p id="error-message" class="text-[11px] text-red-500 font-semibold mt-3 hidden"><i class="fa-solid fa-circle-exclamation mr-1"></i> Invoice ID not found. Please insert a valid string notation.</p>
+        </div>
+    </section>
+
+<main id="billing-main" class="max-w-7xl w-full mx-auto px-6 my-8 mb-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start opacity-0 pointer-events-none hidden transition-all duration-500">
+        
+        <div class="lg:col-span-5 bg-white border border-gray-100 p-6 md:p-8 rounded-2xl shadow-xl space-y-6">
+            <div class="border-b border-gray-100 pb-4">
+                <span class="text-[9px] font-bold uppercase tracking-widest text-gold block mb-1">Sage & Thyme Order Booking</span>
+                <h2 class="text-2xl font-serif text-gray-900 uppercase tracking-wide">Itemized Summary</h2>
+                <p class="text-[10px] text-gray-400 mt-1">Invoice Checked: <span id="display-invoice-id" class="font-bold tracking-wider text-gray-700"></span></p>
+            </div>
+
+            <div class="space-y-3 text-xs text-gray-600">
+                <div class="flex justify-between font-medium"><span>The Royal Malay Dome Banquet (300 Pax)</span> <span class="text-gray-900 font-bold">RM 26,400</span></div>
+                <div class="flex justify-between font-medium"><span>VVIP Hall Architectural Styling & Draping</span> <span class="text-gray-900 font-bold">RM 4,500</span></div>
+                <div class="flex justify-between font-medium"><span>Premium Waitstaff Logistics Desk Deployment</span> <span class="text-gray-900 font-bold">Complimentary</span></div>
+                <div class="flex justify-between font-medium"><span>Pre-Event Tasting Session (6 Pax)</span> <span class="text-gray-900 font-bold">Complimentary</span></div>
+            </div>
+
+            <div class="border-t border-dashed border-gray-200 pt-4 flex justify-between items-center">
+                <p class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Total Settlement Bill</p>
+                <h3 class="font-serif text-3xl font-bold text-sage">RM 30,900</h3>
+            </div>
+        </div>
+
+        <div class="lg:col-span-7 bg-white border border-gray-100 p-6 md:p-8 rounded-2xl shadow-xl relative border-b-4 border-gold">
+            <div class="flex justify-between items-center border-b border-gray-100 pb-4 mb-6">
+                <div>
+                    <h3 class="font-serif text-xl text-gray-900 uppercase tracking-wide">Secure Checkout Gateway</h3>
+                    <p class="text-[10px] text-gray-400 mt-0.5">Kay Event Standard 256-bit Encryption Security</p>
+                </div>
+                <div class="flex gap-2 text-gray-300 text-lg"><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i></div>
+            </div>
+
+            <form id="payment-form" class="space-y-4">
+                <div>
+                    <label class="block text-[10px] font-bold uppercase tracking-wider text-gray-500 mb-1">Corporate / Cardholder Full Name</label>
+                    <input type="text" required placeholder="e.g., SYAFIQ KYLE BIN MOHD" class="w-full text-xs p-3.5 bg-[#faf8f5] border border-gray-200 rounded-md focus:outline-none focus:border-sage uppercase font-semibold tracking-wide">
+                </div>
+                <div>
+                    <label class="block text-[10px] font-bold uppercase tracking-wider text-gray-500 mb-1">Debit / Credit Card Number</label>
+                    <div class="relative flex items-center">
+                        <input type="text" required maxlength="19" placeholder="4123 5678 9012 3456" class="w-full text-xs p-3.5 bg-[#faf8f5] border border-gray-200 rounded-md focus:outline-none focus:border-sage font-bold tracking-widest pl-10 text-gray-900">
+                        <i class="fa-solid fa-credit-card absolute left-3.5 text-gray-400 text-xs"></i>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase tracking-wider text-gray-500 mb-1">Expiration Date</label>
+                        <input type="text" required maxlength="5" placeholder="MM/YY" class="w-full text-xs p-3.5 bg-[#faf8f5] border border-gray-200 rounded-md focus:outline-none focus:border-sage font-bold text-center">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase tracking-wider text-gray-500 mb-1">Security Verification Code (CVV)</label>
+                        <input type="password" required maxlength="3" placeholder="*" class="w-full text-xs p-3.5 bg-[#faf8f5] border border-gray-200 rounded-md focus:outline-none focus:border-sage font-bold text-center">
+                    </div>
+                </div>
+
+<a href="https://toyyibpay.com/" target="_blank" class="w-full block bg-[#5f6f5e] text-white text-center font-bold text-xs uppercase tracking-widest py-4 rounded-sm shadow-md hover:bg-gray-950 transition">
+    Proceed to Secure FPX Payment
+</a>
+            </form>
+        </div>
+    </main>
+
+    <div id="receipt-modal" class="fixed inset-0 bg-black/80 z-50 hidden flex items-center justify-center p-4">
+        <div class="max-w-md w-full bg-white rounded-2xl p-8 text-center shadow-2xl relative border-t-4 border-green-600">
+            <div class="w-16 h-16 bg-green-50 text-green-600 text-3xl rounded-full flex items-center justify-center mx-auto mb-4"><i class="fa-solid fa-circle-check"></i></div>
+            <span class="text-[9px] font-bold uppercase tracking-widest text-gray-400 block mb-1">Simulated Voucher Cleared</span>
+            <h3 class="font-serif text-2xl text-gray-900 mb-4">Settlement Authorized</h3>
+            
+            <div class="bg-[#faf8f5] rounded-xl p-4 text-left text-xs text-gray-600 space-y-2 font-medium">
+                <div class="flex justify-between"><span>Invoice Target:</span> <span id="receipt-invoice-id" class="text-gray-900 font-bold tracking-wider"></span></div>
+                <div class="flex justify-between"><span>Transaction Status:</span> <span class="text-green-600 font-bold uppercase tracking-wider text-[10px]"><i class="fa-solid fa-circle text-[6px] mr-1"></i> Paid</span></div>
+                <div class="flex justify-between"><span>Settled Value:</span> <span class="text-gray-900 font-bold">RM 30,900.00</span></div>
+            </div>
+            <div class="w-full h-[1px] bg-gray-100 my-5"></div>
+            <button id="close-receipt-btn" class="w-full bg-gray-900 text-white text-xs font-bold tracking-widest py-3 uppercase rounded-sm hover:bg-sage transition cursor-pointer">Return To Booking Portal</button>
+        </div>
+    </div>
+
+    <footer class="w-full bg-sage pt-20 pb-10 text-white border-t border-white/10 mt-auto">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-9 mb-16 text-sm opacity-80 normal-case font-light">
+            <div>
+                <h5 class="font-bold uppercase tracking-widest text-[#C5A059] text-xs mb-4">Corporate Headquarters</h5>
+                <p class="leading-relaxed">Level 18, Menara Sage & Thyme,<br>Persiaran Korporat, Cyberjaya,<br>63000 Selangor, Malaysia.</p>
+            </div>
+            <div>
+                <h5 class="font-bold uppercase tracking-widest text-[#C5A059] text-xs mb-4">Direct Concierge</h5>
+                <p class="mb-1"><i class="fa-solid fa-phone mr-2 text-xs"></i> General: +603-8888 7766</p>
+                <p class="mb-1"><i class="fa-solid fa-envelope mr-2 text-xs"></i> Events: concierge@sagethyme.com</p>
+                <p><i class="fa-solid fa-clock mr-2 text-xs"></i> Mon - Sat: 09:00 AM - 06:00 PM</p>
+            </div>
+            <div>
+                <h5 class="font-bold uppercase tracking-widest text-[#C5A059] text-xs mb-4">About The Infrastructure</h5>
+                <p class="leading-relaxed">A premium multi-page client-side digital deployment engineered to streamline high-end hospitality booking and B2B corporate catering requests within Malaysia.</p>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-white/70 text-[10px] xl:text-[12px] tracking-[0.15em] uppercase gap-4">
+            <div class="text-center md:text-left">
+                &copy; <span id="year"></span> sage & thyme caterers. ALL RIGHTS RESERVED. CORPORATE DEPLOYMENT PHASE V4.
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-white transition">privacy policy</a>
+                <span>•</span>
+                <a href="#" class="hover:text-white transition">terms & conditions</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const invoiceInput = document.getElementById('invoice-input');
+        const verifyBtn = document.getElementById('verify-invoice-btn');
+        const verifyText = document.getElementById('verify-text');
+        const verifySpinner = document.getElementById('verify-spinner');
+        const errorMessage = document.getElementById('error-message');
+        const billingMain = document.getElementById('billing-main');
+        const displayInvoiceId = document.getElementById('display-invoice-id');
+        
+        const payBtn = document.getElementById('pay-btn');
+        const btnText = document.getElementById('btn-text');
+        const btnSpinner = document.getElementById('btn-spinner');
+        const receiptModal = document.getElementById('receipt-modal');
+        const receiptInvoiceId = document.getElementById('receipt-invoice-id');
+        const closeReceiptBtn = document.getElementById('close-receipt-btn');
+        const paymentForm = document.getElementById('payment-form');
+
+        verifyBtn.addEventListener('click', function() {
+            const invoiceValue = invoiceInput.value.trim().toUpperCase();
+
+            if (invoiceValue === "") {
+                errorMessage.classList.remove('hidden');
+                return;
+            }
+
+            verifyText.classList.add('hidden');
+            verifySpinner.classList.remove('hidden');
+            verifyBtn.classList.add('pointer-events-none', 'opacity-80');
+            errorMessage.classList.add('hidden');
+
+            setTimeout(() => {
+                verifyText.classList.remove('hidden');
+                verifySpinner.classList.add('hidden');
+                verifyBtn.classList.remove('pointer-events-none', 'opacity-80');
+
+                billingMain.classList.remove('hidden');
+                setTimeout(() => {
+                    billingMain.classList.remove('opacity-0', 'pointer-events-none');
+                }, 50);
+
+                displayInvoiceId.textContent = invoiceValue;
+                receiptInvoiceId.textContent = invoiceValue;
+            }, 1200);
+        });
+
+        payBtn.addEventListener('click', function() {
+            btnText.classList.add('hidden');
+            btnSpinner.classList.remove('hidden');
+            payBtn.classList.add('bg-gray-900', 'pointer-events-none');
+
+            setTimeout(() => {
+                receiptModal.classList.remove('hidden');
+    
+                btnText.classList.remove('hidden');
+                btnSpinner.classList.add('hidden');
+                payBtn.classList.remove('bg-gray-900', 'pointer-events-none');
+            }, 2000);
+        });
+
+        closeReceiptBtn.addEventListener('click', function() {
+            receiptModal.classList.add('hidden');
+            paymentForm.reset();
+            invoiceInput.value = "";
+            
+            billingMain.classList.add('opacity-0', 'pointer-events-none');
+            setTimeout(() => { billingMain.classList.add('hidden'); }, 500);
+        });
+    </script>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 4000);
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+    <script>
+        document.querySelectorAll('.year').forEach(el => el.textContent = new Date().getFullYear());
+
+        document.querySelectorAll('.dropdown-trigger').forEach(trigger => {
+            trigger.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const currentMenu = this.nextElementSibling;
+                document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                    if (menu !== currentMenu) menu.classList.remove('show-menu');
+                });
+                currentMenu.classList.toggle('show-menu');
+            });
+        });
+        document.addEventListener('click', function() {
+            document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('show-menu'));
+        });
+
+        const searchOverlay = document.getElementById('search-overlay');
+        const searchInput = document.querySelector('.search-input');
+        const searchAlert = document.querySelector('.search-alert');
+
+        document.querySelectorAll('.search-open-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                searchOverlay.classList.add('open');
+                setTimeout(() => searchInput.focus(), 200);
+            });
+        });
+        document.querySelectorAll('.search-close-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                searchOverlay.classList.remove('open');
+                searchAlert.classList.add('hidden');
+                searchInput.value = "";
+            });
+        });
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') { e.preventDefault(); searchAlert.classList.remove('hidden'); }
+        });
+
+        const contactDrawer = document.getElementById('contact-drawer');
+        const drawerBackdrop = document.getElementById('drawer-backdrop');
+
+        document.querySelectorAll('.drawer-open-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                contactDrawer.classList.add('open');
+                drawerBackdrop.classList.remove('hidden');
+                setTimeout(() => drawerBackdrop.classList.add('opacity-100'), 10);
+            });
+        });
+        window.closeDrawer = function() {
+            contactDrawer.classList.remove('open');
+            drawerBackdrop.classList.remove('opacity-100');
+            setTimeout(() => drawerBackdrop.classList.add('hidden'), 500);
+        }
+    </script>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 4000);
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
